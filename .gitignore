@@ -8,3 +8,5 @@ build/*
 _C.*
 outputs/*
 checkpoints/*.pt
+/sam2realtime
+/venv

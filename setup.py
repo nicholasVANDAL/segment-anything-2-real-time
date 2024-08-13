@@ -4,8 +4,13 @@
 # This source code is licensed under the license found in the
 # LICENSE file in the root directory of this source tree.
 
-from setuptools import find_packages, setup
-from torch.utils.cpp_extension import BuildExtension, CUDAExtension
+import os
+
+cuda_home = os.environ.get('CUDA_HOME')
+if cuda_home:
+    print(f"CUDA_HOME is set to: {cuda_home}")
+else:
+    print("CUDA_HOME is not set.")
 
 # Package metadata
 NAME = "SAM 2"
@@ -19,6 +24,9 @@ LICENSE = "Apache 2.0"
 # Read the contents of README file
 with open("README.md", "r") as f:
     LONG_DESCRIPTION = f.read()
+
+from setuptools import find_packages, setup
+from torch.utils.cpp_extension import BuildExtension, CUDAExtension
 
 # Required dependencies
 REQUIRED_PACKAGES = [

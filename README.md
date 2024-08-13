@@ -1,4 +1,5 @@
 # segment-anything-2 real-time
+
 Run Segment Anything Model 2 on a **live video stream**
 
 ## Demos
@@ -11,8 +12,6 @@ Run Segment Anything Model 2 on a **live video stream**
 
 </div>
 
-
-
 ## Getting Started
 
 ### Installation
@@ -20,6 +19,7 @@ Run Segment Anything Model 2 on a **live video stream**
 ```bash
 pip install -e .
 ```
+
 ### Download Checkpoint
 
 Then, we need to download a model checkpoint.
@@ -65,3 +65,7 @@ with torch.inference_mode(), torch.autocast("cuda", dtype=torch.bfloat16):
 ## References:
 
 - SAM2 Repository: https://github.com/facebookresearch/segment-anything-2
+
+## Build Issues
+
+- https://github.com/facebookresearch/segment-anything-2/issues/41
